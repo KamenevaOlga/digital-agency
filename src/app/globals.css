@@ -1586,69 +1586,52 @@ h5 {
       }
 
       .range-slider {
-        @apply px-0.75 py-5 flex flex-col;
+        @apply px-0.75 py-5 flex flex-col mb-5;
         position: relative;
         @media (width >= 768px) {
           @apply py-6.5;
         }
 
-        .stripe {
-          width: 100%;
-          height: 2px;
+        .slider {
+          @apply relative h-0.5;
           background-color: var(--grey-20);
           @media (width >= 1600px) {
             height: 4px;
           }
-        }
 
-        .range-slider-budget {
-          @apply flex items-center justify-center w-26.5;
-          position: absolute;
-          top: 0;
-          left: 0;
-          translate: 20% 50%;
-          @media (width >= 768px) {
-            @apply w-81.5;
-            translate: 20% 90%;
-          }
-          @media (width >= 1600px) {
-            translate: 20% 40%;
-          }
-
-          .circle {
-            @apply font-medium text-sm text-center;
-            color: var(--absolute-white);
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            border: 4px solid var(--grey-30);
-            background-color: var(--green-50);
-            position: relative;
-            @media (width >= 1600px) {
-              @apply text-base;
-              border: 4px solid var(--grey-30);
-              width: 32px;
-              height: 32px;
-            }
-
-            span {
-              position: absolute;
-              top: 0;
-              left: 0;
-              translate: -30% 100%;
-              @media (width >= 1600px) {
-                translate: -30% 130%;
-              }
-            }
-          }
-
-          .stripe-green {
-            width: 100%;
+          .progress {
+            @apply absolute rounded;
             height: 3px;
-            background-color: var(--green-50);
+            top: 0;
+            bottom: 0;
+            background: var(--green-50);
             @media (width >= 1600px) {
               height: 5px;
             }
+          }
+        }
+
+        .range-input {
+          @apply relative;
+
+          .value-label {
+            position: absolute;
+            top: 25px;
+            transform: translateX(-50%);
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--absolute-white);
+            white-space: nowrap;
+            z-index: 1;
+            @media (width >= 1600px) {
+              font-size: 16px;
+            }
+          }
+
+          .range-min,
+          .range-max {
+            @apply absolute w-full -top-1 h-0.5 appearance-none pointer-events-none
+            bg-transparent;
           }
         }
       }
@@ -1709,6 +1692,33 @@ h5 {
       }
     }
   }
+}
+
+input[type="range"]::-webkit-slider-thumb,
+input[type="range"]::-moz-range-thumb,
+input[type="range"]::-ms-thumb {
+  -webkit-appearance: none;
+  pointer-events: auto;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 4px solid var(--grey-30);
+  background-color: var(--green-50);
+  transition: background 0.2s;
+  @media (width >= 1600px) {
+    width: 32px;
+    height: 32px;
+  }
+}
+input[type="range"]::-moz-range-thumb {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+}
+input[type="range"]::-ms-thumb {
+  appearance: none;
+  margin-top: 0;
 }
 
 /* ------------- Footer */

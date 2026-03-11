@@ -3,6 +3,7 @@ import React, { useState, useActionState } from "react";
 import FormElementItem from "./FormElementItem";
 import { FormState, ElementFormItems } from "@/lib/types";
 import { sendAction } from "@/app/actions/sendAction";
+import RangeSlider from "./rangeSlider/RangeSlider";
 
 const Form = () => {
   const initialState: FormState = {
@@ -133,18 +134,15 @@ const Form = () => {
             <span>Your Budget</span>
             <p>Slide to indicate your budget range</p>
           </div>
-          <div className="range-slider">
-            <div className="stripe"></div>
-            <div className="range-slider-budget">
-              <div className="circle">
-                <span>$1000</span>
-              </div>
-              <div className="stripe-green"></div>
-              <div className="circle">
-                <span>$5000</span>
-              </div>
-            </div>
-          </div>
+
+          <RangeSlider
+            initialMin={1000}
+            initialMax={5000}
+            min={0}
+            max={10000}
+            step={100}
+            priceCap={1000}
+          />
         </div>
         <div className="input-field-message">
           <span>Your Message</span>
