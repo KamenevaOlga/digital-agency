@@ -42,21 +42,17 @@ const Form = () => {
   ]);
 
   const toggleCheck = (id: number) => {
-    // Считаем количество выполненных элементов
     const completedCount = elementFormItems.filter(
       (item) => item.completed,
     ).length;
 
-    // Находим элемент, который хотят изменить
     const itemToChange = elementFormItems.find((item) => item.id === id);
 
-    // Если хотят снять отметку с выполненного элемента, и он последний — блокируем действие
     if (itemToChange?.completed && completedCount === 1) {
-      alert("Должен быть хотя бы один выполненный элемент!");
+      alert("At least one element must be selected!");
       return;
     }
 
-    // Создаём копию массива
     const updatedItems = [...elementFormItems];
     const index = updatedItems.findIndex((item) => item.id === id);
 

@@ -294,7 +294,6 @@ h5 {
   }
 }
 
-/* --------- переделать */
 .logo-small {
   @apply w-12.5 h-12.5 rounded-[7px] flex items-center justify-center;
   background-color: var(--green-50);
@@ -3121,6 +3120,36 @@ input[type="range"]::-ms-thumb {
         }
       }
     }
+  }
+}
+
+.yandex-map-wrapper {
+  @apply m-6;
+
+  .error-state {
+    @apply text-red-500 text-sm text-center md:text-base 2xl:text-lg;
+
+    .retry-button {
+      @apply ml-2 px-3 py-1 bg-blue-500 text-white rounded cursor-pointer;
+      transition: background-color 0.2s;
+    }
+    .retry-button:hover {
+      background-color: #1d4ed8;
+    }
+  }
+
+  .loading-container {
+    @apply text-center py-4;
+    .loading-state {
+      @apply inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500;
+    }
+    p {
+      @apply font-medium;
+    }
+  }
+
+  .map-container {
+    @apply rounded-lg overflow-hidden shadow-lg 2xl:h-100;
   }
 }
 
