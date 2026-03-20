@@ -3,6 +3,7 @@ import Link from "next/link";
 import LogoBig from "./LogoBig";
 import { usePathname } from "next/navigation";
 import AppButtonSocialNetwork from "./AppButtonSocialNetwork";
+import { useState, useEffect } from "react";
 
 const menuItems = [
   {
@@ -41,6 +42,12 @@ interface menuItemsProps {
 }
 
 const Footer = () => {
+  const [currentYear, setCurrentYear] = useState(new Date().getFullYear());
+
+  useEffect(() => {
+    setCurrentYear(new Date().getFullYear());
+  }, []);
+
   return (
     <footer className="footer">
       <div className="container">
@@ -63,20 +70,20 @@ const Footer = () => {
         </div>
         <div className="bottom">
           <div className="bottom-contact">
-            <button>
+            <div className="contact-item">
               <i className="icon-envelope"></i>
               <span>hello@squareup.com</span>
-            </button>
-            <button>
+            </div>
+            <div className="contact-item">
               <i className="icon-phone"></i>
               <span>+91 91813 23 2309</span>
-            </button>
-            <button>
+            </div>
+            <div className="contact-item">
               <i className="icon-map-pin"></i>
               <span>Somewhere in the World</span>
-            </button>
+            </div>
           </div>
-          <p>© 2023 SquareUp. All rights reserved.</p>
+          <p>© {currentYear} SquareUp. All rights reserved.</p>
         </div>
       </div>
     </footer>

@@ -15,12 +15,22 @@ const FormElementItem = ({
   toggleCheck,
 }: elementItemsProps) => {
   return (
-    <div className="check-box">
-      <button className="check" onClick={() => toggleCheck(id)}>
-        {completed ? <i className="icon-check"></i> : ""}
-      </button>
-      {title}
-    </div>
+    <label className="form-element-item">
+      <input
+        type="checkbox"
+        name="selectedElements"
+        value={id}
+        checked={completed}
+        onChange={() => toggleCheck(id)}
+        className="form-checkbox visually-hidden"
+      />
+      <div className="check-box">
+        <div className={`check ${completed ? "checked" : ""}`}>
+          {completed && <i className="icon-check"></i>}
+        </div>
+        {title}
+      </div>
+    </label>
   );
 };
 

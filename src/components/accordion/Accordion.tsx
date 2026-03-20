@@ -1,6 +1,7 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import AccordionUI from "./AccordionUI";
+import { useScreenSize } from "@/hooks/useScreenSize";
 
 const Accordion = () => {
   const data = [
@@ -14,7 +15,7 @@ const Accordion = () => {
       number: "02",
       question: "How can SquareUp help my business?",
       answer:
-        "SquareUp offers a range of services including design, engineering, and project management.",
+        "SquareUp offers a range of services including design, engineering, and project management. We specialize in user experience design, web development, mobile app development, custom software development, branding and identity, and more.",
     },
     {
       number: "03",
@@ -69,6 +70,17 @@ const Accordion = () => {
     }
   };
 
+  const screenSize = useScreenSize();
+  const [classes, setClasses] = useState<string>("hidden");
+
+  useEffect(() => {
+    if (screenSize === "xs" || screenSize === "sm" || screenSize === "md") {
+      setClasses("hidden");
+    } else {
+      setClasses("block");
+    }
+  }, [screenSize]);
+
   return (
     <>
       <div className="accordion">
@@ -89,7 +101,7 @@ const Accordion = () => {
             );
           })}
         </div>
-        <div className="hidden lg:block">
+        <div className={`${classes}`}>
           {secondColumn.map((item, localIndex) => {
             const globalIndex = midIndex + localIndex;
             return (

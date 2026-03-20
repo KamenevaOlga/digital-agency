@@ -32,7 +32,7 @@ const CTASection = () => {
           </p>
         </div>
 
-        <Link href={"#"} className="btn-sm btn-green">
+        <Link href={"/contact"} className="btn-sm btn-green">
           <AppButton label={"Start Project"} />
         </Link>
       </div>

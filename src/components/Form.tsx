@@ -13,11 +13,6 @@ const Form = () => {
     success: false,
   };
 
-  const [state, formAction, isPending] = useActionState(
-    sendAction,
-    initialState,
-  );
-
   const [elementFormItems, setElementFormItems] = useState<ElementFormItems[]>([
     {
       id: 1,
@@ -40,6 +35,18 @@ const Form = () => {
       completed: false,
     },
   ]);
+
+  const formActionWithItems = async (
+    initialState: FormState,
+    formData: FormData,
+  ) => {
+    return sendAction(initialState, formData, elementFormItems, 1000, 5000);
+  };
+
+  const [state, formAction, isPending] = useActionState(
+    formActionWithItems,
+    initialState,
+  );
 
   const toggleCheck = (id: number) => {
     const completedCount = elementFormItems.filter(
@@ -86,6 +93,7 @@ const Form = () => {
               name="fullname"
               id="fullname"
               placeholder="Type here"
+              autoComplete="name"
               className="input-item"
             />
             {state.errors.fullname && (
@@ -102,6 +110,7 @@ const Form = () => {
               name="email"
               id="email"
               placeholder="Type here"
+              autoComplete="email"
               className="input-item"
             />
             {state.errors.email && (
@@ -148,6 +157,7 @@ const Form = () => {
             name="yourmessage"
             id="yourmessage"
             placeholder="Type here"
+            autoComplete="off"
             className="input-item-message"
           />
           {state.errors.yourmessage && (

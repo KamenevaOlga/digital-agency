@@ -20,7 +20,7 @@ const AccordionUI = ({
 }: AccordionUIProps) => {
   return (
     <>
-      <div className="item ">
+      <div className={`item ${isOpen ? "active" : ""}`}>
         <Link
           href={"#"}
           onClick={() => onClick(itemIndex)}
@@ -34,12 +34,9 @@ const AccordionUI = ({
             <i className="icon-x-mark" />
           )}
         </Link>
-
-        {isOpen && (
-          <div className="panel">
-            <p>{children}</p>
-          </div>
-        )}
+        <div className="panel">
+          <p>{children}</p>
+        </div>
       </div>
       <div className="divider"></div>
     </>

@@ -60,6 +60,8 @@ const RangeSlider = ({
 
   return (
     <div className="range-slider">
+      <input type="hidden" name="budgetMin" value={minValue} readOnly />
+      <input type="hidden" name="budgetMax" value={maxValue} readOnly />
       <div className="slider ">
         <div className="progress " ref={progressRef}></div>
       </div>

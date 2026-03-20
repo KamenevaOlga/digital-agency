@@ -129,7 +129,7 @@ const page = () => {
                     </div>
                   </div>
 
-                  <Link href={"#"} className="btn btn-card">
+                  <Link href={"/contact"} className="btn btn-card">
                     <AppButton label={"Apply Now"} />
                   </Link>
                 </div>
@@ -151,7 +151,7 @@ const page = () => {
                       </p>
                     </div>
                   </div>
-                  <Link href={"#"} className="btn btn-card">
+                  <Link href={"/contact"} className="btn btn-card">
                     <AppButton label={"Apply Now"} />
                   </Link>
                 </div>
@@ -173,7 +173,7 @@ const page = () => {
                       </p>
                     </div>
                   </div>
-                  <Link href={"#"} className="btn btn-card">
+                  <Link href={"/contact"} className="btn btn-card">
                     <AppButton label={"Apply Now"} />
                   </Link>
                 </div>
@@ -203,7 +203,7 @@ const page = () => {
                       </p>
                     </div>
                   </div>
-                  <Link href={"#"} className="btn btn-card">
+                  <Link href={"/contact"} className="btn btn-card">
                     <AppButton label={"Apply Now"} />
                   </Link>
                 </div>
@@ -225,7 +225,7 @@ const page = () => {
                       </p>
                     </div>
                   </div>
-                  <Link href={"#"} className="btn btn-card">
+                  <Link href={"/contact"} className="btn btn-card">
                     <AppButton label={"Apply Now"} />
                   </Link>
                 </div>
@@ -247,7 +247,7 @@ const page = () => {
                       </p>
                     </div>
                   </div>
-                  <Link href={"#"} className="btn btn-card">
+                  <Link href={"/contact"} className="btn btn-card">
                     <AppButton label={"Apply Now"} />
                   </Link>
                 </div>
@@ -277,7 +277,7 @@ const page = () => {
                       </p>
                     </div>
                   </div>
-                  <Link href={"#"} className="btn btn-card">
+                  <Link href={"/contact"} className="btn btn-card">
                     <AppButton label={"Apply Now"} />
                   </Link>
                 </div>
@@ -299,7 +299,7 @@ const page = () => {
                       </p>
                     </div>
                   </div>
-                  <Link href={"#"} className="btn btn-card">
+                  <Link href={"/contact"} className="btn btn-card">
                     <AppButton label={"Apply Now"} />
                   </Link>
                 </div>
@@ -321,7 +321,7 @@ const page = () => {
                       </p>
                     </div>
                   </div>
-                  <Link href={"#"} className="btn btn-card">
+                  <Link href={"/contact"} className="btn btn-card">
                     <AppButton label={"Apply Now"} />
                   </Link>
                 </div>
@@ -351,7 +351,7 @@ const page = () => {
                       </p>
                     </div>
                   </div>
-                  <Link href={"#"} className="btn btn-card">
+                  <Link href={"/contact"} className="btn btn-card">
                     <AppButton label={"Apply Now"} />
                   </Link>
                 </div>
@@ -373,7 +373,7 @@ const page = () => {
                       </p>
                     </div>
                   </div>
-                  <Link href={"#"} className="btn btn-card">
+                  <Link href={"/contact"} className="btn btn-card">
                     <AppButton label={"Apply Now"} />
                   </Link>
                 </div>
@@ -395,7 +395,7 @@ const page = () => {
                       </p>
                     </div>
                   </div>
-                  <Link href={"#"} className="btn btn-card">
+                  <Link href={"/contact"} className="btn btn-card">
                     <AppButton label={"Apply Now"} />
                   </Link>
                 </div>

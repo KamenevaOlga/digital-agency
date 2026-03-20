@@ -25,7 +25,7 @@ const page = () => {
         {/* ----------- Design -- */}
         <div className="services-container">
           <div className="services-header">
-            <h2>Design</h2>
+            <h2 id="design-section">Design</h2>
             <p className="paragraph">
               At Squareup, our design team is passionate about creating
               stunning, user-centric designs that captivate your audience and
@@ -143,7 +143,7 @@ const page = () => {
         {/* -------- Engineering -- */}
         <div className="services-container">
           <div className="services-header">
-            <h2>Engineering</h2>
+            <h2 id="engineering-section">Engineering</h2>
             <p className="paragraph">
               Our engineering team combines technical expertise with a passion
               for innovation to build robust and scalable digital solutions. We
@@ -264,7 +264,7 @@ const page = () => {
         {/* ---- Project Management -- */}
         <div className="services-container">
           <div className="services-header">
-            <h2>Project Management</h2>
+            <h2 id="project-management-section">Project Management</h2>
             <p className="paragraph">
               Our experienced project management team ensures that your projects
               are delivered on time, within budget, and according to your
@@ -391,7 +391,7 @@ const page = () => {
                 </p>
               </div>
 
-              <Link href={"#"} className="btn-sm btn-green">
+              <Link href={"/contact"} className="btn-sm btn-green">
                 <AppButton label={"Start Project"} />
               </Link>
             </div>
@@ -399,7 +399,6 @@ const page = () => {
           </div>
         </div>
         {/*  */}
-        {/* <ContactSection />   С ФОРМОЙ */}
       </div>
     </div>
   );
